@@ -1,0 +1,278 @@
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+	font-family: 'Libre Franklin', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #e5e2d6;
+	color: #222222;
+}
+
+.firstpage{
+    background-image: url(firstpage.jpg);
+    text-align: center;
+    height: 100%;
+    font-size: 18px;
+    background-size: cover;
+    width: 100%;
+}
+
+.title {
+  font-size: 70px;
+  width: 250px;
+  justify-content: left;
+  align-items: left;
+  margin-left: 53px;
+  position: absolute;
+  margin-top: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #bf9a8e;
+}
+
+.circle-animation {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin-left: 100px;
+  margin-top: 70px;
+  border: 2px solid #bf9a8e;
+  animation: circle-pulse 4s infinite;
+  
+}
+
+@keyframes circle-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*First step: Emily's Story*/
+.custom-button {
+  background-color: #dcc278;
+  color: #bf9a8e;
+  font-size: 40px;
+  margin-top: 50%;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #bf9a8e;
+  color: #dcc278;
+  transform: scale(1.05);
+}
+
+/*News report on emily s case*/
+
+.newsbutton {
+  background-color: #bf9a8e;
+  color: #dcc278;
+  font-size: 40px;
+  margin-top: 20px;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin-left: 365px;
+}
+
+.newsbutton:hover {
+  background-color: #dcc278;
+  color: #bf9a8e;
+  transform: scale(1.05);
+}
+
+  /*Fade In Text Animation */
+  .fade-in-container{
+    float: left;
+  width: 50%;
+  position: relative;
+  align-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  margin: 0;
+  }
+
+  .fade-in-text {
+    font-family: "Montserrat Medium", Arial;
+    font-size: 31px;
+    transform: scale(0.94);
+    color: #222222;
+    margin-left: 300px;
+    opacity: 0;
+    filter: blur(4px);
+    transition: opacity 0.8s, filter 0.8s;
+    transform: translateY(20px);
+    animation: fade-in 30s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  
+  .fade-in-text.fade-in {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  .fade-in-word {
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+  }
+  
+  .fade-in-word:before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+  }
+  
+ /*Youtube video properties*/
+
+  iframe{
+    width: 50%;
+    height: 500px;
+    float: right;
+    box-shadow: 0 8px 16px 0 rgba(109, 100, 100, 0.2);
+  }
+
+  /* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .fade-in-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    float: none;
+  }
+}
+
+/*news report*/
+#container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 16px 0 rgba(109, 100, 100, 0.2);
+    background-image: url("newspaper.jpg");
+    font-family: 'Newsreader';
+  }
+
+  p{
+    position: absolute;
+    margin-bottom: 20px;
+    clear: both;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+  .date{
+    float: right;
+    position: relative;
+    margin-right: 30px;
+  }
+  header h2 {
+    font-size: 40px;
+    margin: 0 0 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+  
+  /* Header styles */
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  /* Article content styles */
+  
+  .report-title {
+    font-size: 64px;
+    margin: 0 0 20px;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+    border-top: 3px solid black;
+    margin-top: 40px;
+    padding-top: 10px;
+    text-align: center;
+    width: 950px;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 40px;
+    margin: 0 0 10px;
+    text-align: center;
+    padding-top: 10px;
+  }
+ 
+  .paragraph{
+      position: relative;
+  }
+   
+  .row {
+    display: flex;
+    width: 900px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    width: 900px;
+    flex: 50%;
+    padding: 10px;
+  }
+
+  img {
+    margin-left: 60px;
+    margin-top: 20px;
+  }
+  

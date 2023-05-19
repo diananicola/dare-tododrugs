@@ -7,16 +7,13 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #e5e2d6;
-	color: #222222;
 }
-
-.firstpage{
-    background-image: url(firstpage.jpg);
-    text-align: center;
-    height: 100%;
-    font-size: 18px;
-    background-size: cover;
-    width: 100%;
+.firstpage {
+  background-image: url(firstpage.jpg);
+  text-align: center;
+  height: 100%;
+  font-size: 18px;
+  background-size: cover;
 }
 
 .title {
@@ -29,6 +26,7 @@ body {
   margin-top: 50px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   color: #bf9a8e;
+  transition: transform 0.3s ease-in-out;
 }
 
 .circle-animation {
@@ -36,34 +34,54 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  margin-left: 100px;
+  margin-left: 10%;
   margin-top: 70px;
   border: 2px solid #bf9a8e;
   animation: circle-pulse 4s infinite;
-  
+  overflow: hidden;
 }
 
 @keyframes circle-pulse {
   0% {
     transform: scale(1);
-    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
   }
   50% {
     transform: scale(1.2);
-    opacity: 0.6;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
   100% {
     transform: scale(1);
-    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .circle-animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-left: -23px;
+    position: relative;
+    width: 200px;
+  }
+
+  .firstpage {
+    height: 800px;
+  }
+}
+
 
 /*First step: Emily's Story*/
 .custom-button {
   background-color: #dcc278;
   color: #bf9a8e;
   font-size: 40px;
-  margin-top: 50%;
+  margin-top: 49%;
+  position: relative;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -82,24 +100,62 @@ body {
   transform: scale(1.05);
 }
 
+.custom-button::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-color: #bf9a8e;
+  opacity: 0;
+  border-radius: 8px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-button:hover::before {
+  opacity: 0.3;
+}
+
+.custom-button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-color: #dcc278;
+  opacity: 0;
+  border-radius: 8px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom-button:hover::after {
+  opacity: 0.3;
+}
+
 /*News report on emily s case*/
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40%;
+  position: absolute;
+  margin-left: 25%;
+}
 
 .newsbutton {
   background-color: #bf9a8e;
   color: #dcc278;
   font-size: 40px;
-  margin-top: 20px;
   border: none;
   padding: 15px 32px;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
   font-weight: bold;
   border-radius: 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-  margin-left: 365px;
 }
 
 .newsbutton:hover {
@@ -108,77 +164,99 @@ body {
   transform: scale(1.05);
 }
 
-  /*Fade In Text Animation */
-  .fade-in-container{
+.newsbutton.hide {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/*Fade In Text Animation */
+.fade-in-container{
     float: left;
-  width: 50%;
-  position: relative;
-  align-self: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 50px;
-  margin: 0;
-  }
-
-  .fade-in-text {
-    font-family: "Montserrat Medium", Arial;
-    font-size: 31px;
-    transform: scale(0.94);
-    color: #222222;
-    margin-left: 300px;
-    opacity: 0;
-    filter: blur(4px);
-    transition: opacity 0.8s, filter 0.8s;
-    transform: translateY(20px);
-    animation: fade-in 30s forwards cubic-bezier(0.11, 0, 0.5, 0);
-  }
-  
-  .fade-in-text.fade-in {
-    opacity: 1;
-    filter: blur(0);
-  }
-
-  .fade-in-word {
-    display: inline-block;
-    position: relative;
-    margin: 0 5px;
-  }
-  
-  .fade-in-word:before {
-    content: "";
+    width: 60%;
     position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    transition: transform 0.5s;
-  }
-  
- /*Youtube video properties*/
+    flex-direction: column;
+    margin-top: 8%;
+    margin-left: 5%;
+    
+}
 
-  iframe{
-    width: 50%;
-    height: 500px;
-    float: right;
-    box-shadow: 0 8px 16px 0 rgba(109, 100, 100, 0.2);
-  }
+.fade-in-text {
+  font-family: "Montserrat Medium", Arial;
+  font-size: 45px;
+  transform: scale(0.94);
+  color: #222222;
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 0.8s, filter 0.8s;
+  transform: translateY(20px);
+  animation: fade-in 30s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
 
-  /* Media queries for responsive design */
-@media screen and (max-width: 768px) {
-  .fade-in-container {
-    width: 100%;
-    padding: 0 20px;
-  }
+.fade-in-text.fade-in {
+  opacity: 1;
+  filter: blur(0);
+}
 
-  iframe {
-    width: 100%;
-    height: 300px;
-    float: none;
+.joe {
+  font-size: 18px;
+  line-height: 1.5;
+  border-radius: 8px;
+  width: 530px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.joe.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Youtube video properties */
+iframe {
+width: 50%;
+height: 500px;
+float: right;
+box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
+border-radius: 10px;
+transform: scale(0.95);
+transition: transform 0.3s ease-in-out;
+margin-right: 5%;
+margin-top: 5%;
+}
+
+iframe:hover {
+transform: scale(1);
+box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1000px) {
+.fade-in-container, .joe {
+  width: 90%;
+  padding: 0 20px;
+  position: relative;
+  margin-top: -5%;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+  float: none;
+  margin-top: -1.5%;
+}
+
+.btn-container{
+    font-size: 10px;
+    position: absolute;
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 10%;
+
   }
 }
+
 
 /*news report*/
 #container {
@@ -194,6 +272,7 @@ body {
     box-shadow: 0 8px 16px 0 rgba(109, 100, 100, 0.2);
     background-image: url("newspaper.jpg");
     font-family: 'Newsreader';
+    margin-top: 20%;
   }
 
   p{
@@ -274,5 +353,30 @@ body {
   img {
     margin-left: 60px;
     margin-top: 20px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    #container {
+      margin-top: 10%;
+      width: 80%;
+    }
+  
+    .report-title {
+      width: 90%;
+    }
+  
+    p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .column {
+      width: 80%;
+      max-width: none;
+    }
+
+    .row{
+      width: 100%;
+    }
   }
   

@@ -95,3 +95,4 @@ function isElementInViewport(element) {
     window.addEventListener("resize", handleScroll);
     handleScroll();
   });
+

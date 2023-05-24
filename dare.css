@@ -6,7 +6,7 @@ body {
 	font-family: 'Libre Franklin', sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: #e5e2d6;
+	background-color:  #E8DED4 !important;;
 }
 .firstpage {
   background-image: url(firstpage.jpg);
@@ -18,12 +18,12 @@ body {
 
 .title {
   font-size: 70px;
-  width: 250px;
+  width: 70%;
   justify-content: left;
   align-items: left;
-  margin-left: 53px;
+  margin-left: 15%;
   position: absolute;
-  margin-top: 50px;
+  margin-top: 14%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   color: #bf9a8e;
   transition: transform 0.3s ease-in-out;
@@ -56,29 +56,10 @@ body {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .circle-animation {
-    width: 150px;
-    height: 150px;
-  }
-
-  .title {
-    font-size: 20px;
-    margin-left: -23px;
-    position: relative;
-    width: 200px;
-  }
-
-  .firstpage {
-    height: 800px;
-  }
-}
-
-
 /*First step: Emily's Story*/
 .custom-button {
-  background-color: #dcc278;
-  color: #bf9a8e;
+  background-color:   #212426ff;
+  color: #E8DED4;
   font-size: 40px;
   margin-top: 49%;
   position: relative;
@@ -95,8 +76,8 @@ body {
 }
 
 .custom-button:hover {
-  background-color: #bf9a8e;
-  color: #dcc278;
+  background-color: #E8DED4;
+  color: #333536;
   transform: scale(1.05);
 }
 
@@ -107,7 +88,7 @@ body {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background-color: #bf9a8e;
+  background-color: #E8DED4;
   opacity: 0;
   border-radius: 8px;
   transition: opacity 0.3s ease-in-out;
@@ -124,7 +105,7 @@ body {
   left: -10px;
   right: -10px;
   bottom: -10px;
-  background-color: #dcc278;
+  background-color: #E8DED4;
   opacity: 0;
   border-radius: 8px;
   transition: opacity 0.3s ease-in-out;
@@ -135,18 +116,20 @@ body {
 }
 
 /*News report on emily s case*/
-.btn-container {
+.btn-container2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40%;
+  margin-top: 42%;
   position: absolute;
-  margin-left: 25%;
+  margin-left: 30%;
+  padding-bottom: 100px;
+  margin-bottom: 100%;
 }
 
 .newsbutton {
-  background-color: #bf9a8e;
-  color: #dcc278;
+  background-color:   #212426ff;
+  color: #E8DED4;
   font-size: 40px;
   border: none;
   padding: 15px 32px;
@@ -159,8 +142,8 @@ body {
 }
 
 .newsbutton:hover {
-  background-color: #dcc278;
-  color: #bf9a8e;
+  background-color:   #212426ff;
+  color: #E8DED4;
   transform: scale(1.05);
 }
 
@@ -198,7 +181,7 @@ body {
 }
 
 .joe {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.5;
   border-radius: 8px;
   width: 530px;
@@ -206,6 +189,13 @@ body {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s, transform 0.8s;
+  border-bottom: 8px;
+  background-color: #919AA3ff;;
+  border: 10px solid;
+  border-color: #919AA3ff;;
+  text-align:start;
+  float: left;
+  margin-left: -1px;
 }
 
 .joe.fade-in {
@@ -231,38 +221,13 @@ transform: scale(1);
 box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
 }
 
-/* Media queries for responsive design */
-@media screen and (max-width: 1000px) {
-.fade-in-container, .joe {
-  width: 90%;
-  padding: 0 20px;
-  position: relative;
-  margin-top: -5%;
-}
-
-iframe {
-  width: 100%;
-  height: 500px;
-  float: none;
-  margin-top: -1.5%;
-}
-
-.btn-container{
-    font-size: 10px;
-    position: absolute;
-    margin-top: 5%;
-    width: 80%;
-    margin-left: 10%;
-
-  }
-}
-
 
 /*news report*/
 #container {
     width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+    position: relative;
+    margin: auto;
+    padding: 24px;
     border: 2px solid #ccc;
     border-radius: 5px;
     display: flex;
@@ -272,7 +237,7 @@ iframe {
     box-shadow: 0 8px 16px 0 rgba(109, 100, 100, 0.2);
     background-image: url("newspaper.jpg");
     font-family: 'Newsreader';
-    margin-top: 20%;
+    margin-top: 55%;
   }
 
   p{
@@ -343,7 +308,7 @@ iframe {
     width: 900px;
   }
   
-  /* Create two equal columns that sits next to each other */
+  /* Create two equal columns that sit next to each other */
   .column {
     width: 900px;
     flex: 50%;
@@ -354,8 +319,280 @@ iframe {
     margin-left: 60px;
     margin-top: 20px;
   }
+  
+  /*link to videos*/
 
-  @media screen and (max-width: 1000px) {
+.interrogation{
+  float:left;
+  width: 700px;
+  box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
+  border-radius: 10px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.interrogation:hover {
+  transform: scale(1);
+  box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
+  }
+
+  .fade-in-playlist{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500px;
+    width: 700px;
+    float: right;
+  }
+    /*link to videos*/
+    #playlist-section{
+      width: 90%;
+      height: 70%;
+      margin-left: 5%;
+    }
+.interrogation{
+  float:left;
+  width: 50%;
+  box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
+  border-radius: 10px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+.interrogation:hover {
+  transform: scale(1);
+  box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
+  }
+
+  .fade-in-playlist{
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500px;
+    width: 47%;
+    float: right;
+    margin-right: 0;
+    margin-top: -1.5%;
+  }
+  .p-interrogation{
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 8px;
+    width: 79.5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 8px;
+    background-color: #919AA3ff;
+    border: 10px solid;
+    border-color: #919AA3ff;
+    text-align:start;
+    float:right;
+    position: relative;
+    right: 18%;
+    margin-top: -20px;
+}
+
+  .btn-container3{
+    margin-left: 27%;
+    margin-bottom: 8%;
+  }
+
+  /* button that opens interrogation playlist on yt */
+  .interr-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:  #212426ff;
+    color: #E8DED4;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .interr-btn:hover {
+    transform: scale(1.1);
+  }
+
+    /* BUTTON to move to the insta account section */
+    .btn-container5{
+      margin-top: 42%;
+      padding: 10px;
+      margin-left: 32%;
+      margin-bottom: 12.5%;
+    }
+
+  /* Section for the insta account */
+  #instagram-section{
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    margin-left: 5%;
+  }
+
+  .insta-photo{
+    position: relative;
+    float: right;
+    width: 700px;
+    box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
+    border-radius: 10px;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    margin-right: 0;
+    margin-left: 100%;
+    margin-top: -2%;
+  }
+
+  .insta-photo:hover {
+    transform: scale(1);
+    box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
+    }
+
+  .fade-in-insta{
+    position: absolute;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 500px;
+    width: 47%;
+    float: left;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  /* button to go to the podcast */
+  .btn-container6{
+    position: absolute;
+    margin-left: 34%;
+    margin-top: 33%;
+    
+  }
+  #podcast-container{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    margin-top: 50%;
+  }
+  @keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #27273c 20%, #E8DED4 80% );
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+
+
+  /* Media queries for responsive design */
+@media screen and (max-width: 1000px) {
+  .fade-in-container, .joe {
+    width: 90%;
+    padding: 0 20px;
+    position: relative;
+    margin-top: 5%;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 500px;
+    float: none;
+    margin-top: -1.5%;
+  }
+  
+  .btn-container{
+      font-size: 10px;
+      position: absolute;
+      margin-top: 5%;
+      width: 80%;
+      margin-left: 10%;
+      padding-bottom: 20%;
+  
+    }
+
+    #container{
+    clear: both;
+    }
+    
+    .circle-animation {
+      width: 20%;
+      height: 9.5%;
+    }
+  
+    .title {
+      font-size: 35px;
+      margin-top: 18%;
+      margin-left: 20%;
+      position: relative;
+      width: 60%;
+    }
+  
+    .firstpage {
+      height: 100%;
+    }
+
     #container {
       margin-top: 10%;
       width: 80%;
@@ -366,8 +603,8 @@ iframe {
     }
   
     p {
-      margin-left: 10px;
-      margin-right: 10px;
+      margin-left: 5%;
+      margin-right: 5%;
     }
   
     .column {
@@ -378,5 +615,10 @@ iframe {
     .row{
       width: 100%;
     }
-  }
+
+    .btn-container3{
+      position: absolute;
+      margin-left: 5%;
+    }
   
+  }

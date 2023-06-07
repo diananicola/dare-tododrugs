@@ -1,4 +1,3 @@
-/*paragraph about the interogation*/
 function isElementInViewport(element) {
   var rect = element.getBoundingClientRect();
   return (
@@ -10,51 +9,42 @@ function isElementInViewport(element) {
 }
 
 function handleScroll() {
-  var joeElements = document.querySelectorAll('.joe');
-  joeElements.forEach(function (joeElement) {
-    if (isElementInViewport(joeElement)) {
-      joeElement.classList.add('fade-in');
+  var fadeContainer = document.querySelector('.fade-in-container');
+  var fadeText = document.querySelectorAll('.fade-in-text');
+  var joeElement = document.querySelector('.joe');
+  var fadePlaylist = document.querySelector('.fade-in-playlist');
+
+  if (isElementInViewport(fadeContainer)) {
+    fadeContainer.classList.add('fade-in');
+  } else {
+    fadeContainer.classList.remove('fade-in');
+  }
+
+  fadeText.forEach(function (text) {
+    if (isElementInViewport(text)) {
+      text.classList.add('fade-in');
     } else {
-      joeElement.classList.remove('fade-in');
+      text.classList.remove('fade-in');
     }
   });
+
+  if (isElementInViewport(joeElement)) {
+    joeElement.classList.add('fade-in');
+  } else {
+    joeElement.classList.remove('fade-in');
+  }
+
+  if (isElementInViewport(fadePlaylist)) {
+    fadePlaylist.classList.add('fade-in');
+  } else {
+    fadePlaylist.classList.remove('fade-in');
+  }
 }
 
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('resize', handleScroll);
 handleScroll();
 
-/*Initial Police Interrogation*/
-function isElementInViewport(element) {
-    var rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-  
-  function handleScroll() {
-    var fadeElements = document.querySelectorAll('.fade-in-text');
-    for (var i = 0; i < fadeElements.length; i++) {
-      if (isElementInViewport(fadeElements[i])) {
-        fadeElements[i].classList.add('fade-in');
-      } else {
-        fadeElements[i].classList.remove('fade-in');
-      }
-    }
-  }
-  
-  window.addEventListener('scroll', handleScroll);
-  window.addEventListener('resize', handleScroll);
-  handleScroll();
-
-  window.addEventListener("load", () => {
-    const videoTitle = document.getElementById("videoTitle");
-    videoTitle.style.opacity = 1;
-  });
-  
   /*First Custom Button*/
   function addRippleEffect(event) {
     const button = event.target;
@@ -95,4 +85,3 @@ function isElementInViewport(element) {
     window.addEventListener("resize", handleScroll);
     handleScroll();
   });
-

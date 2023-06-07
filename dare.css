@@ -1,15 +1,120 @@
-html {
-  scroll-behavior: smooth !important;
+* {
+  margin: 0;
+  padding: 0;
 }
+body, html {
+  height: 100%;
+  scroll-behavior: smooth !important;
+  width: 100%;
+}           
 
 body {
-	font-family: 'Libre Franklin', sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color:  #E8DED4 !important;;
+  background: #fff;   
+  position: relative;             
 }
+
+section {
+  padding-top: 5%;
+  min-height: 100%;
+  font-weight: 300;
+  color: #2a3039;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+}
+section h1 {
+  font-size: 35px;
+}
+
+#skills {
+  background: #E8DED4;;
+  color: #ffffff;
+  width: 100%;
+}
+#projects {
+  background: #2a3039;    
+  width: 100%;
+}
+
+.dotnav-right {
+  right: 10px;
+  top: 50%;
+  margin-top: -50px;
+  height: 100px;
+  z-index: 999;
+  position: fixed;
+}
+
+.dotnav {
+  padding: 0;
+  list-style: none;
+  font-size: 0.001px;
+}
+
+.dotnav > li {
+  display: inline-block;
+  font-size: 1rem;
+  vertical-align: top;
+}
+.dotnav > li:nth-child(n+2) {
+  margin-left: 15px;
+}
+
+.dotnav > li > a {
+  display: inline-block;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #66ccff;
+  vertical-align: top;
+  overflow: hidden;
+  padding: 0;
+  text-indent: -999%;
+}
+.dotnav > li > a:hover,
+.dotnav > li > a:focus {
+  background: #66ccff;
+  outline: none;
+}
+.dotnav > li > a:active {
+  background: #66ccff;
+}
+.dotnav > li.active > a {
+  background: #66ccff;
+}
+.dotnav-vertical > li {
+  display: block;
+  margin-right:10px;
+}
+.dotnav-vertical > li:nth-child(n+2) {
+  margin-left: 0;
+  margin-top: 10px;
+}
+.awesome-tooltip + .tooltip > .tooltip-inner {
+  background-color: #66ccff; 
+  color: #fff; 
+  border: 1px solid #66ccff; 
+}
+.awesome-tooltip + .tooltip.left > .tooltip-arrow{
+  top:50%;
+  right:0;
+  margin-top:-5px;
+  border-top:5px solid transparent;
+  border-bottom:5px solid transparent;
+  border-left:5px solid #66ccff;
+}
+
+/*section home*/
+#home{
+background-image: url(firstpage.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
 .firstpage {
-  background-image: url(firstpage.jpg);
   text-align: center;
   height: 100%;
   font-size: 18px;
@@ -17,11 +122,12 @@ body {
 }
 
 .title {
+  font-family: 'Helvetica', sans-serif;
   font-size: 70px;
   width: 70%;
   justify-content: left;
   align-items: left;
-  margin-left: 15%;
+  margin-left: 12%;
   position: absolute;
   margin-top: 14%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -34,8 +140,8 @@ body {
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  margin-left: 10%;
-  margin-top: 70px;
+  margin-left: 17%;
+  margin-top: -2%;
   border: 2px solid #bf9a8e;
   animation: circle-pulse 4s infinite;
   overflow: hidden;
@@ -61,8 +167,10 @@ body {
   background-color:   #212426ff;
   color: #E8DED4;
   font-size: 40px;
-  margin-top: 49%;
+  margin-top: 45%;
   position: relative;
+  margin-left: 28%;
+  float: left;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -73,6 +181,7 @@ body {
   border-radius: 6px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-family: Helvetica, sans-serif;
 }
 
 .custom-button:hover {
@@ -115,7 +224,117 @@ body {
   opacity: 0.3;
 }
 
-/*News report on emily s case*/
+/* Quote */
+.quote {
+  margin: 0 auto;
+  margin-top: 28%;
+  float: left;
+  margin-left: 3%;
+  font-family: Helvetica, sans-serif;
+
+}
+
+.quote-text {
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.5;
+  color: #E8DED4;
+  padding: 0.5%;
+  margin-bottom: 20%;
+  text-align: justify ;
+}
+
+/*section instagram*/
+
+/*section youtube*/
+#about{
+  background-color: #2a3039;
+}
+/*Fade In Text Animation */
+.fade-in-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s, transform 0.8s;
+  /**float: left;*/
+  position: absolute;
+}
+
+.fade-in-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-text {
+  font-family: "Montserrat Medium", Arial;
+  font-size: 45px;
+  transform: scale(0.94);
+  color: #E8DED4;
+  opacity: 0;
+  filter: blur(4px);
+  transition: opacity 0.8s, filter 0.8s;
+  transform: translateY(20px);
+  animation: fade-in 30s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  margin-left: -18%;
+  margin-top: 14%;
+}
+
+.fade-in-text.fade-in {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.joe {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  border-radius: 8px;
+  width: 530px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s, transform 0.8s;
+  border-bottom: 8px;
+  background-color: #E8DED4;
+  border: 10px solid;
+  border-color: #E8DED4;
+  text-align: start;
+  float: left;
+  margin-top: 27%;
+  margin-left: -18%;
+}
+
+.joe.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Youtube video properties */
+video {
+  width: 50%;
+  height: 60%;
+  float: right;
+  box-shadow: 0 10px 40px 0 rgba(109, 100, 100, 0.2); /* Adjust the values here */
+  border-radius: 10px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease-in-out;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+video:hover {
+  transform: scale(1);
+  box-shadow: 0 6px 10px 0 rgba(109, 100, 100, 0.3); /* Adjust the values here */
+}
+
+
+  /*News report on emily s case button*/
 .btn-container2 {
   display: flex;
   justify-content: center;
@@ -125,9 +344,12 @@ body {
   margin-left: 30%;
   padding-bottom: 100px;
   margin-bottom: 100%;
+  font-family: Helvetica, sans-serif;
+  
 }
 
 .newsbutton {
+  font-family: Helvetica, sans-serif;
   background-color:   #212426ff;
   color: #E8DED4;
   font-size: 40px;
@@ -152,473 +374,410 @@ body {
   transform: translateY(50px);
 }
 
-/*Fade In Text Animation */
-.fade-in-container{
-    float: left;
-    width: 60%;
-    position: absolute;
-    flex-direction: column;
-    margin-top: 8%;
-    margin-left: 5%;
-    
+/*news report*/
+#container {
+  width: 60%;
+  position: relative;
+  margin: auto;
+  padding: 24px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 16px 0 rgba(109, 100, 100, 0.2);
+  background-image: url("newspaper.jpg");
+  font-family: 'Newsreader';
+  color: black;
 }
 
-.fade-in-text {
-  font-family: "Montserrat Medium", Arial;
-  font-size: 45px;
-  transform: scale(0.94);
-  color: #222222;
-  opacity: 0;
-  filter: blur(4px);
-  transition: opacity 0.8s, filter 0.8s;
-  transform: translateY(20px);
-  animation: fade-in 30s forwards cubic-bezier(0.11, 0, 0.5, 0);
+p{
+  position: absolute;
+  margin-bottom: 20px;
+  clear: both;
+  font-size: 15.5px;
+  margin-left: 5%;
+  color: black;
+}
+.date{
+  float: right;
+  position: relative;
+  margin-right: 5%;
+  color: black;
+}
+header h2 {
+  font-size: 30px;
+  margin: 0 0 2%;
+  text-align: center;
+  padding-top: 2%;
 }
 
-.fade-in-text.fade-in {
-  opacity: 1;
-  filter: blur(0);
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 5%;
+  color: black;
 }
 
-.joe {
-  font-size: 20px;
-  line-height: 1.5;
-  border-radius: 8px;
-  width: 530px;
+.header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 2%;
+  color: black;
+}
+
+.header p {
+  font-size: 5%;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* Article content styles */
+.report-title {
+  font-size: 64px;
+  margin: 0 0 2%;
+  border-bottom: 3px solid black;
+  padding-bottom: 10px;
+  border-top: 3px solid black;
+  margin-top: 5%;
+  padding-top: 10px;
+  text-align: center;
+  color: black;
+  width: 100%;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 0 0 10px;
+  text-align: center;
+  padding-top: 10px;
+  color: black;
+}
+
+.paragraph{
+    position: relative;
+    color: black;
+    text-align: justify
+}
+
+.border-middle{
+  margin-left: 5%;
+}
+ 
+.row {
+  display: flex;
+  width: 100%;
+}
+
+/* Create two equal columns that sit next to each other */
+.column {
+  width: 80%;
+  flex: 50%;
+  padding: 10px;
+}
+
+.diana {
+  margin-left: 7%;
+  margin-top: 10%;
+  width: 90%;
+  border-radius: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s, transform 0.8s;
-  border-bottom: 8px;
-  background-color: #919AA3ff;;
-  border: 10px solid;
-  border-color: #919AA3ff;;
-  text-align:start;
-  float: left;
-  margin-left: -1px;
+  object-fit: cover;
+  filter: drop-shadow(8px 8px 10px gray);
 }
 
-.joe.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+.diana::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Youtube video properties */
-iframe {
-width: 50%;
-height: 500px;
-float: right;
+.group{
+  width: 70%;
+  margin-left: 15%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+.group::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-container3{
+  margin-left: 30%;
+  width: 39%;
+  font-size: 20%;
+}
+    
+/*link to videos*/
+/*link to videos*/
+.interrogation {
+float: left;
+position: relative;
+margin-left: 5%;
+width: 700px;
 box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
 border-radius: 10px;
 transform: scale(0.95);
 transition: transform 0.3s ease-in-out;
-margin-right: 5%;
-margin-top: 5%;
+cursor: pointer;
+margin-top: 8%;
 }
 
-iframe:hover {
+.interrogation:hover {
 transform: scale(1);
 box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
 }
 
-
-/*news report*/
-#container {
-    width: 900px;
-    position: relative;
-    margin: auto;
-    padding: 24px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 16px 0 rgba(109, 100, 100, 0.2);
-    background-image: url("newspaper.jpg");
-    font-family: 'Newsreader';
-    margin-top: 55%;
-  }
-
-  p{
-    position: absolute;
-    margin-bottom: 20px;
-    clear: both;
-    font-size: 15px;
-    margin-left: 30px;
-  }
-  .date{
-    float: right;
-    position: relative;
-    margin-right: 30px;
-  }
-  header h2 {
-    font-size: 40px;
-    margin: 0 0 10px;
-    text-align: center;
-    padding-top: 10px;
-}
-  
-  /* Header styles */
-  .header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .header h1 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-  
-  /* Article content styles */
-  
-  .report-title {
-    font-size: 64px;
-    margin: 0 0 20px;
-    border-bottom: 3px solid black;
-    padding-bottom: 10px;
-    border-top: 3px solid black;
-    margin-top: 40px;
-    padding-top: 10px;
-    text-align: center;
-    width: 950px;
-    font-weight: bold;
-  }
-  
-  h2 {
-    font-size: 40px;
-    margin: 0 0 10px;
-    text-align: center;
-    padding-top: 10px;
-  }
- 
-  .paragraph{
-      position: relative;
-  }
-   
-  .row {
-    display: flex;
-    width: 900px;
-  }
-  
-  /* Create two equal columns that sit next to each other */
-  .column {
-    width: 900px;
-    flex: 50%;
-    padding: 10px;
-  }
-
-  img {
-    margin-left: 60px;
-    margin-top: 20px;
-  }
-  
-  /*link to videos*/
-
-.interrogation{
-  float:left;
-  width: 700px;
-  box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
-  border-radius: 10px;
-  transform: scale(0.95);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
+.fade-in-playlist {
+font-family: 'Poppins';
+font-size: 16px;
+font-weight: 500px;
+width: 600px;
+float: right;
+margin-top: 2%;
 }
 
-.interrogation:hover {
-  transform: scale(1);
-  box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
-  }
+.p-interrogation {
+font-family: Helvetica, sans-serif;
+font-size: 20px;
+line-height: 1.5;
+border-radius: 8px;
+width: 530px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+border-bottom: 8px;
+background-color: #E8DED4;
+border: 10px solid;
+border-color: #E8DED4;
+text-align: start;
+position: relative;
+margin-top: -20%;
+float: right;
+margin-right: 7.5%;
+}
 
-  .fade-in-playlist{
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 500px;
-    width: 700px;
-    float: right;
-  }
-    /*link to videos*/
-    #playlist-section{
-      width: 90%;
-      height: 70%;
-      margin-left: 5%;
-    }
-.interrogation{
-  float:left;
+.p-interrogation.fade-in {
+opacity: 1;
+transform: translateY(0);
+transition-delay: 0.3s;
+}
+
+.btn-container4 {
+font-family: "Cormorant Garamond", arial;
+outline: 0;
+border: 2px solid #1b1e21;
+cursor: pointer;
+background-color: #2a3039;
+color: #E8DED4;
+padding: 14px 24px 16px;
+font-size: 20px;
+font-weight: 500;
+line-height: 1;
+transition: transform 200ms, background-color 200ms, color 200ms;
+position: absolute;
+margin-top: 33%;
+float: right;
+margin-left: 2.5%;
+}
+
+.btn-container4:hover {
+background-color: rgba(232, 222, 212, 0.7);
+color: #1b1e21;
+transform: scale(0.95);
+}
+
+.btn-container4.hide {
+opacity: 0;
+transform: translateY(50px);
+}
+
+
+/* Media queries for responsive design */
+@media screen and (max-width: 500px) {
+/* first page style responsive */
+.circle-animation {
+  position: absolute;
   width: 50%;
-  box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
-  border-radius: 10px;
-  transform: scale(0.95);
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-  margin-left: 0;
+  height: 23%;
+  margin-top: 10%;
+  margin-left: 10%;
 }
 
-.interrogation:hover {
-  transform: scale(1);
-  box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
-  }
-
-  .fade-in-playlist{
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 500px;
-    width: 47%;
-    float: right;
-    margin-right: 0;
-    margin-top: -1.5%;
-  }
-  .p-interrogation{
-    font-size: 20px;
-    line-height: 1.5;
-    border-radius: 8px;
-    width: 79.5%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 8px;
-    background-color: #919AA3ff;
-    border: 10px solid;
-    border-color: #919AA3ff;
-    text-align:start;
-    float:right;
-    position: relative;
-    right: 18%;
-    margin-top: -20px;
+.title{
+  font-size: 200%;
+  margin-top: 18%;
+  margin-left: 17%;
 }
 
-  .btn-container3{
-    margin-left: 27%;
-    margin-bottom: 8%;
-  }
-
-  /* button that opens interrogation playlist on yt */
-  .interr-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color:  #212426ff;
-    color: #E8DED4;
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    font-size: 17px;
-  }
-  
-  .interr-btn:hover {
-    transform: scale(1.1);
-  }
-
-    /* BUTTON to move to the insta account section */
-    .btn-container5{
-      margin-top: 42%;
-      padding: 10px;
-      margin-left: 32%;
-      margin-bottom: 12.5%;
-    }
-
-  /* Section for the insta account */
-  #instagram-section{
-    width: 90%;
-    height: 70%;
-    position: absolute;
-    margin-left: 5%;
-  }
-
-  .insta-photo{
-    position: relative;
-    float: right;
-    width: 700px;
-    box-shadow: 0 8px 20px 0 rgba(109, 100, 100, 0.2);
-    border-radius: 10px;
-    transform: scale(0.95);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    margin-right: 0;
-    margin-left: 100%;
-    margin-top: -2%;
-  }
-
-  .insta-photo:hover {
-    transform: scale(1);
-    box-shadow: 0 10px 20px 0 rgba(109, 100, 100, 0.3);
-    }
-
-  .fade-in-insta{
-    position: absolute;
-    font-family: 'Poppins';
-    font-size: 16px;
-    font-weight: 500px;
-    width: 47%;
-    float: left;
-    margin-right: 0;
-    margin-top: 0;
-  }
-
-  /* button to go to the podcast */
-  .btn-container6{
-    position: absolute;
-    margin-left: 34%;
-    margin-top: 33%;
-    
-  }
-  #podcast-container{
-    width: 100%;
-    height: 70%;
-    position: absolute;
-    margin-top: 50%;
-  }
-  @keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
-.waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-}
-.waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #27273c 20%, #E8DED4 80% );
-}
-.bgTop {
-    z-index: 15;
-    opacity: 0.5;
-}
-.bgMiddle {
-    z-index: 10;
-    opacity: 0.75;
-}
-.bgBottom {
-    z-index: 5;
-}
-.wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-}
-.waveTop {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
-}
-.waveMiddle {
-    background-size: 50% 120px;
-}
-.waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-}
-.waveBottom {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
+.custom-button {
+  margin-top: 170%;
+  position: relative;
+  font-size: 20px;
+  padding: 14px 24px 16px;
+  margin-left: 17%;
 }
 
+.quote {
+  display: none;
+}
 
-
-  /* Media queries for responsive design */
-@media screen and (max-width: 1000px) {
-  .fade-in-container, .joe {
-    width: 90%;
-    padding: 0 20px;
-    position: relative;
-    margin-top: 5%;
-  }
-  
-  iframe {
-    width: 100%;
-    height: 500px;
-    float: none;
-    margin-top: -1.5%;
-  }
-  
-  .btn-container{
-      font-size: 10px;
-      position: absolute;
-      margin-top: 5%;
-      width: 80%;
-      margin-left: 10%;
-      padding-bottom: 20%;
-  
-    }
-
-    #container{
-    clear: both;
-    }
-    
-    .circle-animation {
-      width: 20%;
-      height: 9.5%;
-    }
-  
-    .title {
-      font-size: 35px;
-      margin-top: 18%;
-      margin-left: 20%;
-      position: relative;
-      width: 60%;
-    }
-  
-    .firstpage {
-      height: 100%;
-    }
-
-    #container {
-      margin-top: 10%;
-      width: 80%;
-    }
-  
-    .report-title {
-      width: 90%;
-    }
-  
-    p {
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-  
-    .column {
-      width: 80%;
-      max-width: none;
-    }
-
-    .row{
+/*   second page (youtube video (to first interrogation) style responsive) */
+  video {
       width: 100%;
+      height: 30%;
+      float: none;
+      margin-top: 5%;
+    }
+    .fade-in-container {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /**float: left;*/
+      position: relative;
+    }
+    
+    .fade-in-container.fade-in {
+      overflow:visible;
+    }
+    
+    .fade-in-text {
+      font-family: "Montserrat Medium", Arial;
+      font-size: 45px;
+      transform: scale(0.94);
+      color: #E8DED4;
+      margin-left: 70%;
+      margin-top: 5%;
+    }
+    
+    .fade-in-text.fade-in {
+      overflow: visible;
     }
 
-    .btn-container3{
-      position: absolute;
-      margin-left: 5%;
+    .joe {
+      font-size: 20px;
+      line-height: 1.5;
+      border-radius: 8px;
+      width: 130%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-bottom: 8px;
+      background-color: #E8DED4;
+      border: 10px solid;
+      border-color: #E8DED4;
+      margin-top: 20%;
+      margin-left: 70%;
+      position: relative
     }
-  
-  }
+    
+    .joe.fade-in {
+      overflow: visible;
+    }
+
+    .btn-container2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10%;
+      position: absolute;
+      margin-left: 30%;
+      padding-bottom: 100px;
+      margin-bottom: 100%;
+      
+    }
+    
+    
+    /* Remove column styles */
+.column {
+width: 100%;
+flex: none;
+padding: 10px;
+}
+
+/* Adjust image styles */
+
+.diana, .group{
+display: none;
+}
+.interrogation {
+margin-left: 5%;
+width: 90%;
+margin-top: 20%;
+}
+
+/* Adjust container styles */
+#container {
+width: 80%;
+margin: auto;
+font-size: 10px;
+}
+
+.report-title {
+font-size: 27px;
+text-align: center;
+align-items: center;
+width: 100%;
+}
+
+header .h3{
+font-weight: bold;
+font-size: 12px;
+}
+
+.paragraph{
+font-size: 12px;
+text-align: justify;
+margin-right: 10%;
+}
+
+.border-middle{
+  width: 85%;
+}
+
+/* Remove flex and adjust width for row class */
+.row {
+display: block;
+width: 100%;
+}
+
+.newsbutton {
+padding: 14px 24px 16px;
+font-size: 20px;
+margin-left: -20%;
+position: flex;
+}
+
+/* page interrogation rest of the videos */
+.btn-container4{
+margin-left: -75%;
+margin-top: 170%;
+}
+
+.p-interrogation{
+margin-top: 95%;
+position: absolute;
+width: 80%;
+margin-left: 8%;
+}
+
+.fade-in-playlist{
+display: none;
+}
+}

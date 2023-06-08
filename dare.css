@@ -167,7 +167,7 @@ background-position: center;
   background-color:   #212426ff;
   color: #E8DED4;
   font-size: 40px;
-  margin-top: 40%;
+  margin-top: 45%;
   position: relative;
   margin-left: 28%;
   float: left;
@@ -554,6 +554,7 @@ font-weight: 500px;
 width: 600px;
 float: right;
 margin-top: 2%;
+margin-left: 6%;
 }
 
 .p-interrogation {
